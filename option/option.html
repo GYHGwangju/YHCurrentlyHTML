@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .nanum-gothic-regular {
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* 메뉴 카드 */
+        .card-for-menu {
+            position: absolute;
+            top: 22.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 40%;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 90%;
+            margin-top: 0%;
+            margin-bottom: 5%;
+        }
+
+        .temperature-card {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30%;
+        }
+
+        .temperature-card .form-check-input {
+            transform: scale(1.75); /* 원하는 크기로 조절하세요 */
+            margin-right: 10px; /* 라디오 버튼과 글자 사이의 간격 조절 */
+
+        }
+
+        .temperature-card .form-check-label {
+            display: flex;
+            align-items: center;
+            font-size: xx-large;
+            margin-bottom: 10px;
+        }
+
+        /* 하단 버튼 */
+        .bottom-buttons {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            /* transform: translateX(-50%); */
+            scale: 300%;
+        }
+
+    </style>
+    <title>Option</title>
+</head>
+<body>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<nav class="navbar fixed-top bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">ABC 카페 키오스크</a>
+        <!-- <button class="btn btn-success call-staff">직원 호출</button> -->
+        <button type="button" class="btn btn-success call-staff" data-bs-toggle="modal" data-bs-target="#callStaff">
+            직원 호출
+        </button>
+    </div>
+</nav>
+<!-- Modal -->
+<div class="modal fade" id="callStaff" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">직원 호출</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                키오스크 사용이 어려우신가요? 직원이 도와드리겠습니다!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-target="#calledStaff">직원 호출</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 메뉴 표시 -->
+<div class="card mb-3 card-for-menu">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="./image/americano.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h1 class="card-title">아메리카노</h1>
+
+                <h3 class="card-text">에스프레소를 희석시켜 만든 음료</h3>
+
+                <h1 class="card-text" style="color:red;">3,000￦</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 온도 설정 -->
+<div class="card temperature-card">
+    <div class="card-body">
+        <h5 class="card-title" style="font-size: x-large;">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted"><!--이 부분은 비워둡니다.--></h6>
+        <h4 class="card-text">음료의 온도를 설정합니다.</h4>
+        <p></p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label d-flex align-items-center" for="flexRadioDefault1">
+                <p style="color:red; margin: 0;">Hot</p>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label d-flex align-items-center" for="flexRadioDefault2">
+                <p style="color:blue; margin: 0;">Cold</p>
+            </label>
+        </div>
+    </div>
+</div>
+
+<!-- 하단 버튼 -->
+<div class="bottom-buttons cancel-or-select">
+    <button type="button" class="btn btn-secondary" style="margin-right: 10px;">취소</button>
+    <button type="button" class="btn btn-success">선택</button>
+</div>
+</body>
+</html>
