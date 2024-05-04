@@ -27,6 +27,7 @@
             height: 90%;
             margin-top: 0%;
             margin-bottom: 5%;
+            
         }
 
         .temperature-card {
@@ -34,27 +35,15 @@
             top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 30%;
+            width: 20%;
         }
 
-        .temperature-card .form-check-input {
-            transform: scale(1.75); /* 원하는 크기로 조절하세요 */
-            margin-right: 10px; /* 라디오 버튼과 글자 사이의 간격 조절 */
-
-        }
-
-        .temperature-card .form-check-label {
-            display: flex;
-            align-items: center;
-            font-size: xx-large;
-            margin-bottom: 10px;
-        }
 
         /* 하단 버튼 */
         .bottom-buttons {
             position: fixed;
             bottom: 50px;
-            left: 50%;
+            left: 45%;
             /* transform: translateX(-50%); */
             scale: 300%;
         }
@@ -112,22 +101,12 @@
 </div>
 <!-- 온도 설정 -->
 <div class="card temperature-card">
-    <div class="card-body">
-        <h5 class="card-title" style="font-size: x-large;">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted"><!--이 부분은 비워둡니다.--></h6>
-        <h4 class="card-text">음료의 온도를 설정합니다.</h4>
-        <p></p>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label d-flex align-items-center" for="flexRadioDefault1">
-                <p style="color:red; margin: 0;">Hot</p>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label d-flex align-items-center" for="flexRadioDefault2">
-                <p style="color:blue; margin: 0;">Cold</p>
-            </label>
+    <div class="card-body d-flex justify-content-between">
+        <h5 class="card-title" style="font-size: 64px;">음료의 온도</h5>
+        <h4 class="card-text" style="font-size: 24px;">음료의 온도를 설정합니다.</h4>
+        <div class="d-flex" style="align-items: center;">
+            <button type="button" class="btn btn-danger me-2" style="font-size: 64px;">Hot</button>
+            <button type="button" class="btn btn-primary" style="font-size: 64px;">Cold</button>
         </div>
     </div>
 </div>
