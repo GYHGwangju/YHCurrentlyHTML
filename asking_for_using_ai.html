@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS 파트 -->
+    <style>
+        .modal-body {
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-body img {
+            margin-right: 20px; /* 이미지와 텍스트 사이의 간격 조절 */
+            max-width: 50%; /* 이미지의 최대 너비 지정 */
+        }
+
+        .modal-body p {
+            font-size: x-large;
+        }
+        
+    </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<div class="askingForUsingAI">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered ai-modal-using">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel" style="font-size:x-large;">중년층 감지!</h5>
+                </div>
+                <div class="modal-body">
+                    <img src="https://t3.ftcdn.net/jpg/04/53/55/82/360_F_453558273_3jbZ6Wf6bpg4thXfpigXUO8f8eBjjznA.jpg">
+                    <p>인공지능을 사용하면 자체 내장된 인공지능이<br>
+                    이용자분과 목소리로 이야기를 하면서<br>
+                    주문을 할 수 있습니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="font-size: x-large;">일반 주문</button>
+                    <button type="button" class="btn btn-primary" style="font-size: x-large;">음성인식 주문</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
